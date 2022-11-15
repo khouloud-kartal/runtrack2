@@ -11,4 +11,24 @@ for ($i=0; $i <= 100; $i++){
         echo "$i<br>";
     }
 }
+
+/*
+$i = 0;
+while ($i <= 100){
+    if ($i <= 20){
+        echo "<i>$i</i><br>" ;
+        $i++;
+    }else if ($i >= 25 && $i <= 50 && $i != 42){ 
+        echo "<u>$i</u><br>";
+        $i++;
+    }else if ($i === 42){
+        echo "La Plateforme_<br>";
+        $i++;
+    }else{
+        echo "$i<br>";
+        $i++;
+    }
+}
+*/
 ?>
+
