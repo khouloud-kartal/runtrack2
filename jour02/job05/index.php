@@ -1,15 +1,15 @@
 <?php  
 for($i = 0; $i <=1000; $i++){
-$x = 0;
+$x = true;
     for ($j = 2; $j <= $i/2; $j++){
         if($i%$j == 0){
-        $x++;
+        $x = false;
         break;
         }
     }
-        if( $x == 0 && $i != 1 ){
-        echo "$i<br>";
-        }
+    if( $x == true && $i != 1 ){
+    echo "$i<br>";
+    }
 }
 
 /*
