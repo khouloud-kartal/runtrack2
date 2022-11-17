@@ -1,8 +1,9 @@
-<style><?php include "style.css"; ?></style>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
     <title>job02</title>
 </head>
 <body>
