@@ -15,10 +15,12 @@
     <div class="formulaire">
         <p><?php 
                 foreach ($_GET as $i){
-                    if ($i !== '' && $i % 2 ===0){
+                    if ($i !== '' && (int)$i % 2 ===0){
                         echo "Nombre paire";
-                    }else if ($i !== '' && $i % 2 !==0){
+                    }else if ($i !== '' && (int)$i % 2 !==0){
                         echo "Nombre impair";
+                    }else{
+                        echo '';
                     }
                 }
             ?>
