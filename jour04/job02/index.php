@@ -12,7 +12,7 @@
         <label for="nom">Nom</label>
         <input type="text" name="nom" >
         <label for="prenom">Prénom</label>
-        <input type="prenom" name="prenom">
+        <input type="text" name="prenom">
         <input type="submit">
     </form>
     <table>
