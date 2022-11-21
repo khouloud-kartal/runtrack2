@@ -1,0 +1,97 @@
+body{
+    background-color:gray;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+
+.formulaire{
+    width: 50%;
+    padding: 2% 0;
+    margin: 0 auto;
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.formulaire ul{
+    list-style-type: none;
+    background-color: transparent;
+    width: 40%;
+}
+
+.formulaire ul li{
+    float: left;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.formulaire ul::after{
+    content: "";
+    display: table;
+    clear: both;
+    width: 400%;
+}
+
+.formulaire a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+.formulaire a:hover{
+    color:white;
+    box-shadow: 0px 1px 30px black;
+}
+
+.style{
+    display: none;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+.formulaire > ul li:hover .style{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    align-items: center;
+    width: 100%;
+}
+.style li{
+    float: none;
+}
+.style a{
+    padding: 10px;
+    border-bottom: none;
+    background-color: white;
+    width: 93%;
+}
+.style a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+.list > a::after{
+    font-size: 12px;
+}
+.list{
+    background-color: aqua;
+}
+.button{
+    width: 40%;
+    height: 40px;
+    border-radius: 15px;
+    border-color: aqua;
+    background-color: aqua;
+}
+.button:hover{
+    background-color: aqua;
+    border-color: aqua;
+    box-shadow: 0px 1px 30px aqua;
+    border-radius: 15px;
+}
