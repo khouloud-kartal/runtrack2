@@ -14,23 +14,49 @@
         <input type="text" name="largeur">
         <button type="submit">Submit</button>
     </form>
+    <pre>
     <?php
-        $GET['hauteur']= 0;
-        $GET['largeur']= 0;
-        foreach ($GET as $key => $valeur){
-            for ($i = 1; $i <= ($GET['hauteur'] *2); $i++){
-                if ($i =1){
-                    echo " " * ($largeur/2)-1 . "/" . "\\";
-                }elseif ($i <= $GET['hauteur']){
-                    echo " " * ($GET['hauteur'] - $i) . "/" . "_" *$i . "\\";
-                }elseif ($i >$GET['hauteur'] && $i < $GET['largeur']){
-                    echo "|" . " " * $GET['largeur'] . "|";
-                }elseif ($i === $GET['largeur']){
-                    echo "|" . "_" * $GET['largeur'] . "|";
+        if ($_GET["hauteur"] != "" && $_GET["largeur"] != "" ){
+            for($i = 0; $i <= $_GET["hauteur"] - 1; $i++){    
+                if($i == 0){                           
+                    for($a = 0; $a <= $_GET["hauteur"] - 4; $a++){
+                        echo '&nbsp';
+                    }
+                    echo '/' . '\\' . "<br>";
+                }elseif($i <= $_GET["hauteur"]){                                  
+                    for($a = 0; $a <= $_GET["hauteur"] - $i; $a++){
+                        echo '&nbsp';
+                    }
+                    echo '/';
+                    for($a = 1; $a <= $i * 2; $a++){
+                        echo '_';
+                    }
+                    echo '\\' . "<br>";
                 }
             }
-        }
+            for($i = 0; $i <= $_GET["hauteur"] - 1; $i++){
+                for($a = 0; $a <= $_GET["largeur"] % 2 +1; $a++){
+                    echo '&nbsp';
+                }
+                if($i == $_GET["hauteur"] - 1){
+                    echo "|";
+                    for($a = 1; $a <= $_GET["largeur"] - 2; $a++){
+                        echo '_';
+                    }
+                    echo "|" . "<br>";
+                }else{
+                    echo "|";
+                    for($a = 1; $a <= $_GET["largeur"] - 2; $a++){
+                        echo '&nbsp';
+                    }
+                    echo "|" . "<br>";
+                }
+            }
+        }else{
+            echo "Veuillez entrer une hauteur et une hauteur";
+        } 
     ?>
+    </pre>
 </main>
 </body>
 </html>
